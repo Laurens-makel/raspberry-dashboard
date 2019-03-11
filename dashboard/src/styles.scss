@@ -1,0 +1,51 @@
+/* You can add global styles to this file, and also import other style files */
+.widget {
+    width: 50%;
+    border: 2px solid rgb(112, 112, 112);
+    border-radius: 5px;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.33);
+    color: rgb(35, 35, 35);
+    
+    &-title {
+        border-bottom: 2px solid rgb(112, 112,112);
+        padding: 6px;
+        height: 27px;
+    }
+
+    &-options {
+        ul > li {
+            display: inline-block;
+            margin: 0px 7px;
+            padding: 4px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            cursor: pointer;
+
+            &.active {
+                box-shadow: 0 1px 1px rgba(0,0,0,0.33);
+                background: rgba(224, 224, 224, 0.33);
+            }
+
+            &:hover {
+                background: #dddddd;
+            }
+        }
+    }
+
+    &-content {
+        padding: 6px;
+    }
+
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+}
+
+h1, h2, h3, h4, h5 {
+    margin : 0;
+}
+
+ul {
+    list-style: none;
+}

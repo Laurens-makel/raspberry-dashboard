@@ -1,0 +1,30 @@
+<div class="dashboard">
+  <div class="navigation">
+
+  </div>
+  <div class="content">
+    <div class="page-title">
+      <h2>Internet</h2>
+    </div>
+    <div class="page-content">
+      <div class="widget">
+        <div class="widget-title">
+          <h2>Speed monitor</h2>
+        </div>
+        <div class="widget-options">
+          <ul>
+            <li *ngIf="internetSpeed.length >= 6"   [ngClass]="{'active': period == '30 min'}" (click)="setPeriod('30 min')">30 min</li>
+            <li *ngIf="internetSpeed.length >= 12"  [ngClass]="{'active': period == '1h'}"     (click)="setPeriod('1h')">1h</li>
+            <li *ngIf="internetSpeed.length >= 36"  [ngClass]="{'active': period == '3h'}"     (click)="setPeriod('3h')">3h</li>
+            <li *ngIf="internetSpeed.length >= 72"  [ngClass]="{'active': period == '6h'}"     (click)="setPeriod('6h')">6h</li>
+            <li *ngIf="internetSpeed.length >= 144" [ngClass]="{'active': period == '12h'}"    (click)="setPeriod('12h')">12h</li>
+            <li *ngIf="internetSpeed.length >= 288" [ngClass]="{'active': period == '24h'}"    (click)="setPeriod('24h')">24h</li>
+          </ul>
+        </div>
+        <div class="widget-content">
+          <canvas id="canvas">{{ chart }}</canvas>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
